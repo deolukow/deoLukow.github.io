@@ -716,10 +716,10 @@
         </div>
       </div>
 
-      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+       <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4" name="'deo-contact-form'">
         <div class="form-row">
           <div class="col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+            <input type="text" name="nama" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
             <div class="validate"></div>
           </div>
           <div class="col-md-6 form-group">
@@ -732,7 +732,7 @@
           <div class="validate"></div>
         </div>
         <div class="form-group">
-          <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+          <textarea class="form-control" name="pesan" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
           <div class="validate"></div>
         </div>
         <div class="mb-3">
@@ -742,6 +742,8 @@
         </div>
         <div class="text-center"><button type="submit">Send Message</button></div>
       </form>
+
+
 
     </div>
   </section><!-- End Contact Section -->
@@ -772,6 +774,19 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwjekLHKBYYrSbtIB-4JmgytIV0b6UDbJOS5-3VOjNkzUh5tT7ylnlHQzHQFcg2_vQoMw/exec'
+  const form = document.forms['deo-contact-form']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
 
 </body>
 
