@@ -918,6 +918,13 @@ section .container {
   font-family: monospace;
 }
 
+.portfolio .portfolio-wrap .portfolio-info h3 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  font-family: monospace;
+}
+
 .portfolio .portfolio-wrap .portfolio-info p {
   color: #ffffff;
   font-size: 14px;
@@ -946,6 +953,10 @@ section .container {
 
 .portfolio .portfolio-wrap .portfolio-info h4:hover {
   color: #ad0101;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h3:hover {
+  color: #fff;
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -1176,7 +1187,7 @@ section .container {
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   position: fixed;
   left: 0;
   right: 0;
@@ -1189,6 +1200,7 @@ section .container {
   padding-top: 20px;
   padding-bottom: 40px;
 }
+
 
 .portfolio-details .portfolio-title {
   font-size: 26px;
