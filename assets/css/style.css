@@ -48,6 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -914,6 +915,7 @@ section .container {
   font-size: 20px;
   color: #fff;
   font-weight: 600;
+  font-family: monospace;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
@@ -922,6 +924,7 @@ section .container {
   text-transform: uppercase;
   padding: 0;
   margin: 0;
+  font-family: monospace;
 }
 
 .portfolio .portfolio-wrap .portfolio-links {
@@ -938,7 +941,11 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #63eda3;
+  color: #ad0101;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4:hover {
+  color: #ad0101;
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -962,6 +969,8 @@ section .container {
   bottom: 15px;
   right: 15px;
 }
+
+
 
 /*--------------------------------------------------------------
 # Contact
@@ -1117,7 +1126,6 @@ section .container {
   padding: 12px 15px;
 }
 
-
 .contact .php-email-form button[type="submit"] {
   background: #ad0101;
   border: 0;
@@ -1268,3 +1276,20 @@ section .container {
 .credits a:hover {
   color: #fff;
 }
+
+a.disabled {
+  /* Make the disabled links grayish*/
+  color: #515151;
+  /* And disable the pointer events */
+  pointer-events: none;
+}
+
+.nav-menu a.disabled:hover {
+  /* Make the disabled links grayish*/
+  /*color: #515151;*/
+  /* And disable the pointer events */
+  pointer-events: none;
+
+  text-decoration: none;
+}
+
