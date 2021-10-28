@@ -1002,6 +1002,10 @@ section .container {
   background: rgba(255, 255, 255, 0.1);
 }
 
+#anonym {
+  color: #969696;
+}
+
 .contact .info-box h3 {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
